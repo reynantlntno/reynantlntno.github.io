@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sci-Teach Hub [The Repo]</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Avenir">
+  <link rel="icon" href="files/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/sci-teachhub/sci-teachhub/main/files/favicon.ico" type="image/x-icon">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Avenir', sans-serif; /* Use the Avenir font family */
+      color: white;
+    }
+
+    .header {
+      position: relative; /* Fix the header position */
+      top: 0;
+      width: 100%;
+      height: 100px;
+      background-color: black;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.3s ease;
+      z-index: 999; /* Add a higher z-index value */
+    }
+
+    .header .logo {
+      width: 220px;
+      transition: all 0.3s ease;
+      margin-left: 20px;
+      padding: 5px; /* Add padding around the logo */
+    }
+
+    .header .navigation {
+      display: flex;
+      justify-content: flex-end;
+      gap: 20px;
+      margin-right: 20px;
+    }
+
+    .header .navigation a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: light;
+    }
+
+    .header .navigation a:hover {
+      color: #a8e1f5;
+    }
+
+    .header.shrink .logo {
+      width: 100px;
+    }
+
+    .selections-container {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 0px;
+      padding: 0px;
+      background-image: url(https://i.imgur.com/3D5h9EH.gif);
+      background-size: cover;
+      background-position: center;
+    }
+
+    .selections-header {
+      grid-column: 1 / -1;
+      padding: 20px;
+      font-size: 30px;
+      font-weight: light;
+      text-align: left;
+      margin-bottom: 20px;
+      font-family: Avenir, sans-serif;
+    }
+
+    .selection-item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      transition: all 0.3s ease;
+      cursor: pointer; /* Add cursor pointer for clickable effect */
+    }
+
+    .selection-item:hover {
+      transform: scale(1.05);
+      background-color: black;
+    }
+
+    .selection-item img {
+      width: 200px;
+      height: 200px;
+      margin-bottom: 10px;
+    }
+
+    .selection-item p {
+      font-size: 24px;
+      text-align: center;
+      color: white;
+    }
+
+    .upload-container,
+    .download-container {
+      display: none;
+      background-image: url(https://i.imgur.com/fAc7KYN.gif);
+      padding: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .upload-form {
+      display: grid;
+
+      gap: 10px;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      justify-content: center;
+    }
+
+    .upload-form label {
+      color: white;
+      font-weight: light;
+    }
+
+    .upload-form input,
+    .upload-form select {
+      width: 500px;
+      height: 50px;
+      padding: 5px;
+      border-radius: 6px;
+    }
+
+    .upload-form button {
+      padding: 40px 20px;
+      background-color: #152238;
+      font-size: 30px;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+
+    .upload-popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: black;
+      padding: 20px;
+      border-radius: 6px;
+      z-index: 9999;
+      display: none;
+    }
+
+    .upload-popup p {
+      margin-bottom: 10px;
+    }
+
+    .upload-popup button {
+      padding: 10px 20px;
+      background-color: #152238;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+
+.download-container {
+  text-align: center;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 0px;
+  margin-top: 20px;
+}
+#search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Add justify-content property */
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#search-input {
+  width: 500px;
+  height: 50px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+#search-button {
+  padding: 12px 24px; /* Increase the padding to increase button size */
+  background-color: #152238;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+#search-results a {
+  color: white;
+}
+
+#search-results a:hover {
+  color: #a8e1f5;
+}
+
+  </style>
+</head>
+<body>
+  <header class="header">
+    <img class="logo" src="https://i.imgur.com/HteblZ0.png" alt="SCI-TEACH">
+    <nav class="navigation">
+      <a href="https://sci-teachhub.github.io/sci-teachhub/">Home</a>
+    </nav>
+  </header>
+  <section class="selections-container">
+    <h2 class="selections-header">What do you want to do?</h2>
+    <div class="selection-item" data-target="upload-container" onclick="handleSelectionClick(this)">
+      <img class="selection-icon" src="https://i.imgur.com/Az3wKXL.png" alt="Icon 1">
+      <p>Upload File/s</p>
+    </div>
+    <div class="selection-item" data-target="download-container" onclick="handleSelectionClick(this)">
+      <img class="selection-icon" src="https://i.imgur.com/WauN2rD.png" alt="Icon 2">
+      <p>Download File/s</p>
+    </div>
+  </section>
+  <!-- New container for upload options -->
+  <div class="upload-container">
+    <form class="upload-form" onsubmit="handleUploadForm(event)">
+      <label for="file-upload">File Upload</label>
+      <input type="file" id="file-upload" required>
+      <br>
+      <label for="contributor-name">Name of Contributor</label>
+      <input type="text" id="contributor-name" required>
+<br>
+      <label for="affiliations">Affiliations</label>
+      <input type="text" id="affiliations" required>
+<br>
+      <label for="document-title">Document Title</label>
+      <input type="text" id="document-title" required>
+<br>
+      <input type="text" id="subject" value="Electricity" disabled style="background-color: #f0f0f0;">
+<br>
+      <label for="category">Category</label>
+      <select id="category" required>
+        <option value="">Select Category</option>
+        <option value="Instruction/Teaching Strategy">Instruction/Teaching Strategy</option>
+        <option value="Teaching Learning Material">Teaching Learning Material</option>
+        <option value="Teaching Learning Material">Content/Knowledge Mastery</option>
+      </select>
+<br>
+      <label for="date">Date</label>
+      <input type="date" id="date" required>
+<br>
+* Double check. Make sure that all fields are filled correctly.
+<br>
+      <button type="submit">UPLOAD</button>
+    </form>
+  </div>
+  <div>
+  <!-- Upload popup -->
+  <div class="upload-popup" id="upload-popup">
+    <p>The uploaded file is subject for approval. Please wait.</p>
+    <button onclick="closeUploadPopup()">OK</button>
+  </div>
+
+<!-- New container for download options -->
+<div class="download-container">
+  <div class="button-container">
+    <div class="selection-item" onclick="showSearchBar('Instructional / Teaching Strategy')">
+      <p>Instructional / Teaching Strategy</p>
+    </div>
+    <div class="selection-item" onclick="showSearchBar('Teaching-Learning Materials')">
+      <p>Teaching-Learning Materials</p>
+    </div>
+          <div class="selection-item" onclick="showSearchBar('Content Knowledge / Mastery')">
+      <p>Content Knowledge / Mastery</p>
+    </div>
+  </div>
+  <div>
+  <div id="search-container" style="display: none; margin-top: 20px;">
+    <input type="text" id="search-input" placeholder="Search, e.g.: Electricity">
+  <p id="search-results" style="display: none; margin-top: 20px;"></p>
+</div>
+<div>
+<!-- Container for Instructional / Teaching Strategy search results -->
+<div id="instructional-results" style="display: none;">
+  <h3>Instructional / Teaching Strategy Search Results</h3>
+  <div id="instructional-search-results"></div>
+</div>
+
+<!-- Container for Teaching-Learning Materials search results -->
+<div id="tools-results" style="display: none;">
+  <h3>Teaching-Learning Materials Search Results</h3>
+  <div id="tools-search-results"></div>
+</div>
+
+  <script>
+    // Function to handle button click and scroll to the bottom
+function handleButtonClick() {
+  // Scroll to the bottom of the page
+  window.scrollTo({
+    top: document.body.scrollHeight,
+    behavior: 'smooth'
+  });
+
+}
+    // Function to handle selection click
+    function handleSelectionClick(selection) {
+      const target = selection.dataset.target;
+      const uploadContainer = document.querySelector('.upload-container');
+      const downloadContainer = document.querySelector('.download-container');
+  // Call the scroll function after handling the button click
+  handleButtonClick();
+      if (target === 'upload-container') {
+        uploadContainer.classList.add('active');
+        downloadContainer.classList.remove('active');
+      } else if (target === 'download-container') {
+        uploadContainer.classList.remove('active');
+        downloadContainer.classList.add('active');
+      }
+    }
+
+    // Function to handle form submission
+    function handleUploadForm(event) {
+      event.preventDefault();
+
+      const contributorName = document.getElementById('contributor-name').value;
+      const affiliations = document.getElementById('affiliations').value;
+      const documentTitle = document.getElementById('document-title').value;
+      const category = document.getElementById('category').value;
+      const date = document.getElementById('date').value;
+      const fileUpload = document.getElementById('file-upload');
+
+      const fileName = 'Receipt' + '_' + category + '_' + documentTitle + '_' + contributorName;
+      const fileData = `Name of Contributor: ${contributorName}\nAffiliations: ${affiliations}\nDocument Title: ${documentTitle}\nCategory: ${category}\nDate: ${date}`;
+
+      // Generate and download the text file
+      downloadTextFile(fileName, fileData);
+
+      // Upload the file to the corresponding category folder
+      const formData = new FormData();
+      formData.append('file', fileUpload.files[0]);
+
+      const folderName = category.replace(/ /g, '_');
+      uploadFile(formData, folderName);
+
+      // Show the upload popup
+      showUploadPopup();
+    }
+
+    // Function to download the text file
+    function downloadTextFile(fileName, fileData) {
+      const element = document.createElement('a');
+      const file = new Blob([fileData], { type: 'text/plain' });
+      element.href = URL.createObjectURL(file);
+      element.download = fileName + '.txt';
+      document.body.appendChild(element);
+      element.click();
+    }
+
+    // Function to upload the file
+    function uploadFile(formData, folderName) {
+      // Implement the logic to upload the file to the server with appropriate backend code or API call
+      // Use the 'folderName' to determine the target folder on the server
+      // You may need to adjust this part based on your specific backend implementation
+      console.log('Uploading file...');
+      console.log('Folder Name:', folderName);
+      console.log('File:', formData.get('file'));
+    }
+ // Function to show the search bar
+function showSearchBar(category) {
+  const searchContainer = document.getElementById('search-container');
+  const searchInput = document.getElementById('search-input');
+  const searchResults = document.getElementById('search-results');
+
+
+  searchResults.style.display = 'none'; // Hide previous search results
+  searchContainer.style.display = 'flex'; // Show the search container
+
+  searchInput.setAttribute('data-category', category); // Set the selected category as data attribute
+
+  // Add event listener to search input for Enter key press
+  searchInput.addEventListener('keydown', function (event) {
+    if (event.keyCode === 13) {
+      searchFiles();
+    }
+  });
+}
+
+// Function to search for files
+function searchFiles() {
+  const searchInput = document.getElementById('search-input');
+  const searchResults = document.getElementById('search-results');
+  const category = searchInput.getAttribute('data-category');
+  const searchTerm = searchInput.value.toLowerCase();
+
+  // Display "Searching in database..." message
+  searchResults.innerText = 'Searching in database...';
+  searchResults.style.display = 'block';
+
+  // Delay the search results by 2 seconds
+  setTimeout(function() {
+    // Simulated search results (replace with actual search logic)
+  let files = [];
+
+  if (category === 'Instructional / Teaching Strategy') {
+    files = [
+      { name: 'THE-DIFFERENCE-BETWEEN-SERIES-AND-PARALLEL-CIRCUIT.docx', size: '304 KB', date: '2023-05-27', contributorName: 'Jonathan A. Delos Santos', link: 'https://drive.google.com/uc?id=1fr4T4PnfdODmTYAknPtwB_7wxWL5evUo&export=download' },
+      { name: 'SAFETY-IN-USING-ELECTRICITY.docx', size: '453 KB', date: '2023-05-27', contributorName: 'Jonathan A. Delos Santos', link: 'https://drive.google.com/uc?id=13H3Sx8YTrO0aOettM-ooPupITiHFU0M2&export=download' },
+      { name: 'RELATING-SHORT-CIRCUIT-AND-OVER-LOADING-TO-ELECTRICAL-HAZARDS.docx', size: '284 KB', date: '2023-05-27', contributorName: 'Jonathan A. Delos Santos', link: 'https://drive.google.com/uc?id=1jZWRhPEVK7thqqw7sTneyq4eT50MZQFR&export=download' },
+      { name: 'ELECTRICITY.docx', size: '1.1 MB', date: '2023-05-27', contributorName: 'Jonathan A. Delos Santos', link: 'https://drive.google.com/uc?id=1fr4T4PnfdODmTYAknPtwB_7wxWL5evUo&export=download' },
+      { name: 'ELECTRICAL-RESISTANCE.docx', size: '288 KB', date: '2023-05-27', contributorName: 'Jonathan A. Delos Santos', link: 'https://drive.google.com/uc?id=13H3Sx8YTrO0aOettM-ooPupITiHFU0M2&export=download' },
+      { name: 'ELECTRIC-CURRENT-AND-VOLTAGE.docx', size: '293 KB', date: '2023-05-27', contributorName: 'Jonathan A. Delos Santos', link: 'https://drive.google.com/uc?id=1jZWRhPEVK7thqqw7sTneyq4eT50MZQFR&export=download' }
+    ];
+  } else if (category === 'Teaching-Learning Materials') {
+    files = [
+      { name: 'Infer-the-relationship-between-current-and-charge.-S8FE-Ih-30.docx', size: '209 KB', date: '2023-05-27', contributorName: 'Jonathan A. Delos Santos', link: 'https://drive.google.com/uc?id=13C6VPjUMIiz6bYU4s2FbJhFD0lsHZpKf&export=download' },
+      { name: 'Explain-the-functions-of-circuit-breakers-fuses-ea…d-other-safety-devices-in-the-home-S8FE-Ii-33.docx', size: '545 KB', date: '2023-05-27', contributorName: 'Jonathan A. Delos Santos', link: 'https://drive.google.com/uc?id=1s73_5bBExyaydXKD74hxtZpu3V7j8iF5&export=download' },
+      { name: 'ELECTRICITY.pptx', size: '220 KB', date: '2023-05-27', contributorName: 'Jonathan A. Delos Santos', link: 'https://drive.google.com/uc?id=1KcAkx23dw5dxNwD_E9xXw8Z96HhcpWno&export=download' }
+    ];
+  }
+
+  if (files.length === 0 || searchTerm !== 'electricity') {
+    searchResults.innerText = 'No matching files found.';
+    searchResults.style.display = 'block';
+    return;
+  }
+
+  let tableHtml = '<table><tr><th>File Name</th><th>File Size</th><th>Date</th><th>Name of Contributor</th></tr>';
+
+  files.forEach(file => {
+    tableHtml += `<tr><td><a href="${file.link}" target="_blank">${file.name}</a></td><td>${file.size}</td><td>${file.date}</td><td>${file.contributorName}</td></tr>`;
+  });
+
+  tableHtml += '</table>';
+
+    searchResults.innerHTML = tableHtml;
+    searchResults.style.display = 'block';
+  }, 2000); // 2 seconds delay
+}
+
+
+    // Function to show the upload popup
+    function showUploadPopup() {
+      const uploadPopup = document.getElementById('upload-popup');
+      uploadPopup.style.display = 'block';
+    }
+
+    // Function to close the upload popup
+    function closeUploadPopup() {
+      const uploadPopup = document.getElementById('upload-popup');
+      uploadPopup.style.display = 'none';
+    }
+
+
+  </script>
+</body>
+</html>
