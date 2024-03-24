@@ -3,7 +3,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
@@ -103,6 +103,16 @@ nav ul li a {
 }
 
 @media (max-width: 768px) {
+
+    .container {
+        flex-direction: column; /* Change flex-direction to column */
+        align-items: center; /* Center align items */
+    }
+    
+    .rectangle-container {
+        width: 100%; /* Set width to 100% */
+    }
+    
     .intro-text {
         flex-direction: column;
         text-align: center;
@@ -110,14 +120,35 @@ nav ul li a {
 
     .intro-text img {
         order: -1; 
-
     }
 
     .intro-text h2 {
         font-size: 10vw; 
         margin-left: 0;
     }
+
+    .rectangle-container {
+        background-color: #f8f8f8;
+        margin: 20px 0; 
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 10px 10px 20px #d9d9d9, -10px -10px 20px #ffffff;
+        text-align: center;
+    }
+    
+    .rectangle-container h2, .rectangle-container p {
+        margin: 0 auto; 
+        font-size: auto;
+        color: #333;
+    }
+    
+    .rectangle-container img {
+        display: block;
+        margin: 0 auto; 
+        max-width: 100%;
+    }
 }
+
 
 .rectangle-container {
     background-color: #f8f8f8;
@@ -137,7 +168,7 @@ nav ul li a {
 .rectangle-container img {
     display: block;
     margin: 0 auto; 
-    max-width: 100%;
+    max-width: 40%;
 }
 
 
