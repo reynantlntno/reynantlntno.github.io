@@ -16,6 +16,11 @@ body {
     width: 48%; 
     margin-bottom: 20px; 
 }
+
+.half-container img {
+    max-width: 300px;
+}
+
 header {
     background-color: #f8f8f8;
     padding: 20px 0;
@@ -104,26 +109,6 @@ nav ul li a {
 }
 
 
-.rectangle-container {
-    background-color: #f8f8f8;
-    margin: 20px 0; 
-    padding: 10px;
-    border-radius: 20px;
-    box-shadow: 10px 10px 20px #d9d9d9, -10px -10px 20px #ffffff;
-    text-align: center;
-    font-size: 1vw;
-    color: #333;
-}
-
-
-
-.rectangle-container img {
-    display: block;
-    margin: 0 auto; 
-    max-width: 40%;
-    padding-bottom: 10px;
-}
-
 
 @keyframes fadeIn {
     from {
@@ -167,20 +152,4 @@ nav ul li a {
         margin-left: 0;
     }
 
-    .rectangle-container {
-        width: 100%; 
-        background-color: #f8f8f8;
-        margin: 20px 0; 
-        padding: 10px;
-        border-radius: 20px;
-        box-shadow: 10px 10px 20px #d9d9d9, -10px -10px 20px #ffffff;
-        text-align: center;
-        font-size: 2.4vw;
-    }
-    
-    .rectangle-container img {
-        display: block;
-        margin: 0 auto; 
-        max-width: 100%;
-    }
 }
