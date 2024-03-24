@@ -96,7 +96,7 @@ nav ul li a {
     overflow: hidden;
     border-right: .15em solid grey;
     white-space: nowrap;
-    font-size: 8vw; 
+    font-size: 6vw; 
     color: #333;
     margin-left: 6vw; 
     transition: font-size 0.5s ease; 
@@ -105,7 +105,7 @@ nav ul li a {
 
 .rectangle-container {
     background-color: #f8f8f8;
-    margin: 10px 0; 
+    margin: 20px 0; 
     padding: 10px;
     border-radius: 20px;
     box-shadow: 10px 10px 20px #d9d9d9, -10px -10px 20px #ffffff;
@@ -145,12 +145,19 @@ nav ul li a {
 }
 
 @media (max-width: 768px) {
+    .half-container {
+        width: 100%; /* Full width on smaller screens */
+        margin-bottom: 20px; 
+    }
 
-    .container {
-        flex-direction: column; /* Change flex-direction to column */
-        align-items: center; /* Center align items */
+    .rectangle-container {
+        width: 100%; /* Full width on smaller screens */
     }
     
+    .container {
+        flex-direction: column; 
+        align-items: center; 
+    }
     
     .intro-text {
         flex-direction: column;
@@ -167,14 +174,14 @@ nav ul li a {
     }
 
     .rectangle-container {
-        width: 100%; /* Set width to 100% */
+        width: 100%; 
         background-color: #f8f8f8;
-        margin: 10px 0; 
+        margin: 20px 0; 
         padding: 10px;
         border-radius: 20px;
         box-shadow: 10px 10px 20px #d9d9d9, -10px -10px 20px #ffffff;
         text-align: center;
-        font-size: 2vw;
+        font-size: 2.4vw;
     }
     
     .rectangle-container img {
