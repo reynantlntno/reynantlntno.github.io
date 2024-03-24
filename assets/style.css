@@ -145,19 +145,12 @@ nav ul li a {
 }
 
 @media (max-width: 768px) {
-    .half-container {
-        width: 100%; /* Full width on smaller screens */
-        margin-bottom: 20px; 
-    }
 
-    .rectangle-container {
-        width: 100%; /* Full width on smaller screens */
-    }
-    
     .container {
         flex-direction: column; 
         align-items: center; 
     }
+    
     
     .intro-text {
         flex-direction: column;
