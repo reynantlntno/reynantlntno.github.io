@@ -9,13 +9,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-
 }
 
 .half-container {
     width: 48%; 
     margin-bottom: 20px; 
 }
+
 header {
     background-color: #f8f8f8;
     padding: 20px 0;
@@ -57,7 +57,7 @@ nav ul li a {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 100px;
+    min-width: 200px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 1;
@@ -88,7 +88,6 @@ nav ul li a {
 .intro-text img {
     max-width: 300px;
     margin-right: 20px;
-
 }
 
 .intro-text h2 {
@@ -102,15 +101,34 @@ nav ul li a {
     transition: font-size 0.5s ease; 
 }
 
+.rectangle-container {
+    background-color: #f8f8f8;
+    margin: 20px auto; /* Center align horizontally */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px #d9d9d9, -10px -10px 20px #ffffff;
+    text-align: center;
+    max-width: 600px; /* Adjust maximum width as needed */
+}
+
+.rectangle-container h2, .rectangle-container p {
+    margin: 0 auto; 
+    font-size: 15px;
+    color: #333;
+}
+
+.rectangle-container img {
+    display: block;
+    margin: 0 auto; 
+    max-width: 100%;
+}
+
 @media (max-width: 768px) {
-
     .container {
-        flex-direction: column; /* Change flex-direction to column */
-        align-items: center; /* Center align items */
+        flex-direction: column;
+        align-items: center;
     }
-    
 
-    
     .intro-text {
         flex-direction: column;
         text-align: center;
@@ -126,57 +144,24 @@ nav ul li a {
     }
 
     .rectangle-container {
-        width: 100%; /* Set width to 100% */
-        background-color: #f8f8f8;
-        margin: 20px 0; 
-        padding: 20px;
-        border-radius: 20px;
-        box-shadow: 10px 10px 20px #d9d9d9, -10px -10px 20px #ffffff;
-        text-align: center;
+        width: 90%; /* Set width to 90% for mobile */
     }
-    
+
     .rectangle-container h2, .rectangle-container p {
-        margin: 0 auto; 
-        font-size: 15px;
-        color: #333;
+        font-size: 12px; /* Adjust font size for mobile */
     }
-    
+
     .rectangle-container img {
-        display: block;
-        margin: 0 auto; 
-        max-width: 100%;
+        max-width: 80%; /* Adjust maximum width for mobile */
     }
 }
-
-
-.rectangle-container {
-    background-color: #f8f8f8;
-    margin: 20px 0; 
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 10px 10px 20px #d9d9d9, -10px -10px 20px #ffffff;
-    text-align: center;
-}
-
-.rectangle-container h2, .rectangle-container p {
-    margin: 0 auto; 
-    font-size: auto;
-    color: #333;
-}
-
-.rectangle-container img {
-    display: block;
-    margin: 0 auto; 
-    max-width: 40%;
-}
-
 
 @keyframes fadeIn {
     from {
-      opacity: 0; 
+        opacity: 0; 
     }
     to {
-      opacity: 1; 
+        opacity: 1; 
     }
 }
 
@@ -190,4 +175,3 @@ nav ul li a {
     font-size: 18px;
     color: #333;
 }
-
