@@ -4,7 +4,7 @@ body {
 
 .container {
     max-width: 1000px;
-    margin: 0 auto;
+    margin: auto;
     padding: 0 20px;
     display: flex;
     justify-content: space-between;
@@ -102,72 +102,25 @@ nav ul li a {
     transition: font-size 0.5s ease; 
 }
 
-@media (max-width: 768px) {
-
-    .container {
-        flex-direction: column; /* Change flex-direction to column */
-        align-items: center; /* Center align items */
-    }
-    
-
-    
-    .intro-text {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .intro-text img {
-        order: -1; 
-    }
-
-    .intro-text h2 {
-        font-size: 10vw; 
-        margin-left: 0;
-    }
-
-    .rectangle-container {
-        width: 100%; /* Set width to 100% */
-        background-color: #f8f8f8;
-        margin: 20px 0; 
-        padding: 20px;
-        border-radius: 20px;
-        box-shadow: 10px 10px 20px #d9d9d9, -10px -10px 20px #ffffff;
-        text-align: center;
-    }
-    
-    .rectangle-container h2, .rectangle-container p {
-        margin: 0 auto; 
-        font-size: 15px;
-        color: #333;
-    }
-    
-    .rectangle-container img {
-        display: block;
-        margin: 0 auto; 
-        max-width: 100%;
-    }
-}
-
 
 .rectangle-container {
     background-color: #f8f8f8;
-    margin: 20px 0; 
-    padding: 20px;
+    margin: 10px 0; 
+    padding: 10px;
     border-radius: 20px;
     box-shadow: 10px 10px 20px #d9d9d9, -10px -10px 20px #ffffff;
     text-align: center;
-}
-
-.rectangle-container h2, .rectangle-container p {
-    margin: 0 auto; 
-    font-size: auto;
+    font-size: 1vw;
     color: #333;
 }
+
+
 
 .rectangle-container img {
     display: block;
     margin: 0 auto; 
     max-width: 40%;
+    padding-bottom: 10px;
 }
 
 
@@ -191,3 +144,42 @@ nav ul li a {
     color: #333;
 }
 
+@media (max-width: 768px) {
+
+    .container {
+        flex-direction: column; /* Change flex-direction to column */
+        align-items: center; /* Center align items */
+    }
+    
+    
+    .intro-text {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro-text img {
+        order: -1; 
+    }
+
+    .intro-text h2 {
+        font-size: 10vw; 
+        margin-left: 0;
+    }
+
+    .rectangle-container {
+        width: 100%; /* Set width to 100% */
+        background-color: #f8f8f8;
+        margin: 10px 0; 
+        padding: 10px;
+        border-radius: 20px;
+        box-shadow: 10px 10px 20px #d9d9d9, -10px -10px 20px #ffffff;
+        text-align: center;
+        font-size: 2vw;
+    }
+    
+    .rectangle-container img {
+        display: block;
+        margin: 0 auto; 
+        max-width: 100%;
+    }
+}
