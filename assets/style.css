@@ -3,7 +3,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
@@ -130,7 +130,7 @@ nav ul li a {
 
 .rectangle-container h2, .rectangle-container p {
     margin: 0 auto; 
-    font-size: auto;
+    font-size: 14px;
     color: #333;
 }
 
