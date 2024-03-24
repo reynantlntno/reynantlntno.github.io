@@ -1,0 +1,107 @@
+.dark-mode {
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+  }
+  
+  .dark-mode .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .dark-mode header {
+    background-color: #333;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dark-mode h1 {
+    margin: 0;
+    font-size: 24px;
+    background-color: #333;
+  }
+  
+  .dark-mode nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .dark-mode nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  .dark-mode nav ul li:last-child {
+    margin-right: 0;
+  }
+  
+  .dark-mode nav ul li a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .dark-mode .dropdown-content {
+    display: none;
+    position: absolute;
+    border-radius: 10px;
+    background-color: #333;
+    min-width: 100px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+  
+  .dark-mode .dropdown-content a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dark-mode .intro-text {
+    text-align: center;
+    margin-top: 50px;
+    align-items: center;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+    padding: 50px 20px;
+    text-shadow: 10px 10px 20px #d9d9d9, -10px -10px 20px #ffffff;
+  }
+  
+  .dark-mode .intro-text h2 {
+    font-size: 20vh;
+    color: #333;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0; 
+    }
+    to {
+      opacity: 1; 
+    }
+  }
+
+
+  .dark-mode .rectangle-container {
+    background-color: #f8f8f8;
+    margin: 20px;
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px #d9d9d9, -10px -10px 20px #ffffff;
+  }
+  
+  .dark-mode .rectangle-container p {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+  }
+  
