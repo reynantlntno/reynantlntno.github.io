@@ -12,13 +12,8 @@ body {
 
 }
 
-.half-container {
-    width: 48%; 
-    margin-bottom: 20px; 
-}
-
-.half-container img {
-    max-width: 300px;
+.content-text {
+    max-width: 1000px;
 }
 
 header {
