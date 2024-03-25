@@ -16,6 +16,14 @@ body {
     max-width: 1000px;
 }
 
+.content-img {
+    max-width: 200px;
+}
+
+.content-img img {
+    max-width: 200px;
+}
+
 header {
     background-color: #f8f8f8;
     padding: 20px 0;
