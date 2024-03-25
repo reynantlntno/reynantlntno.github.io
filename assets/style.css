@@ -25,6 +25,29 @@ body {
     max-width: 100px;
 }
 
+.shadow-box {
+    background-color: #f8f8f8;
+    margin: 10px 0; 
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px #d9d9d9, -10px -10px 20px #ffffff;
+    text-align: left;
+}
+
+.shadow-box h2, .shadow-box p {
+    padding: 10px;
+    margin: 0 auto; 
+    font-size: 18px;
+    color: #333;
+}
+
+.shadow-box img {
+    padding: 10px;
+    display: block;
+    max-width: 200px;
+}
+
+
 header {
     background-color: #f8f8f8;
     padding: 20px 0;
