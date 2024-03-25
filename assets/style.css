@@ -17,11 +17,12 @@ body {
 }
 
 .content-img {
-    max-width: 200px;
+    max-width: 100px;
+    margin: 10px;
 }
 
 .content-img img {
-    max-width: 200px;
+    max-width: 100px;
 }
 
 header {
