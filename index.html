@@ -7,20 +7,30 @@
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/dark-mode.css">
+
 </head>
 <body>
 
 <header>
   <div class="container">
     <h2>reynantlntno.</h2>
+
+
+
     <nav>
       <ul>
         <li><a href="http://reynantlntno.github.io/">Home</a></li>
         <li><a href="https://github.com/reynantlntno">GitHub</a></li>
+
         <li class="dropdown">
           <a href="#">More</a>
           <div class="dropdown-content">
-            <a href="#">not yet ready...</a>
+            <div class="toggle-container">
+              <input type="checkbox" id="dark-mode-toggle" class="toggle-checkbox">
+              <label for="dark-mode-toggle" class="toggle-slider"></label>
+              <p>Toggle Dark Mode</p>
+            </div>
           </div>
         </li>
       </ul>
@@ -74,6 +84,7 @@
 </div>
 
 <script src="scripts/typewriter.js"></script>
+<script src="scripts/dark-mode.js"></script>
 
 </body>
 </html>

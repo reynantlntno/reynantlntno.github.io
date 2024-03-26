@@ -1,9 +1,8 @@
-const darkModeToggle = document.getElementById('darkModeToggle');
-
 function toggleDarkMode() {
-  const body = document.body;
-  // not yet ready // body.classList.toggle('dark-mode');
-  console.log("Dark mode not yet ready!");
+  var body = document.querySelector('body');
+  body.classList.toggle('dark-mode');
 }
 
-darkModeToggle.addEventListener('change', toggleDarkMode);
+document.getElementById('dark-mode-toggle').addEventListener('click', function() {
+  toggleDarkMode();
+});

@@ -1,0 +1,106 @@
+/* dark-mode.css */
+
+body.dark-mode {
+    background-color: #333;
+    color: #f8f8f8;
+}
+
+body.dark-mode .container {
+    background-color: #333;
+}
+
+body.dark-mode .intro-text {
+    color: #f8f8f8;
+}
+
+body.dark-mode .intro-text h2 {
+    color: #f8f8f8;
+}
+
+body.dark-mode .content-text h2,
+body.dark-mode .content-text p,
+body.dark-mode .content-text h1,
+body.dark-mode .content-text h3,
+body.dark-mode .footer p,
+body.dark-mode .shadow-box h2,
+body.dark-mode .shadow-box p,
+body.dark-mode nav ul li a {
+    color: #f8f8f8;
+}
+
+body.dark-mode .footer {
+    color: #f8f8f8;
+}
+
+body.dark-mode header {
+    background-color: #333;
+}
+
+body.dark-mode nav ul li a {
+    color: #f8f8f8;
+}
+
+body.dark-mode .dropdown-content {
+    background-color: #333;
+    color: #f8f8f8;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .dropdown-content a {
+    color: #f8f8f8;
+}
+
+body.dark-mode .shadow-box {
+    background-color: #333;
+    box-shadow: 10px 10px 20px #000, -10px -10px 20px #555;
+}
+
+.toggle-container {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 34px;
+    margin: 20px
+}
+
+.toggle-container p {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 15px;
+}
+
+.toggle-checkbox {
+    display: none;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: .4s;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: .4s;
+}
+
+.toggle-checkbox:checked + .toggle-slider {
+    background-color: #2196F3;
+}
+
+.toggle-checkbox:checked + .toggle-slider:before {
+    transform: translateX(26px);
+}
