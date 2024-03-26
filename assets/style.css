@@ -13,7 +13,7 @@ body {
 }
 
 .container-pad {
-    margin-top: 50vh;
+    margin-top: 45%;
 }
 
 
@@ -50,7 +50,7 @@ body {
     align-items: center;
     justify-content: center;
     position: absolute; 
-    top: 20%;
+    top: 10%;
     left: 50%;
     transform: translate(-50%, 50%);
 
@@ -200,7 +200,7 @@ nav ul li a {
         align-items: center;
     }
     .container-pad {
-        margin-top: 70vh;
+        margin-top: 90%;
     }
 
     .intro-text {
