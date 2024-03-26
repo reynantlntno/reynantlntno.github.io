@@ -35,7 +35,7 @@ body {
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 999px) {
     .content-text h1,
     .content-text p,
     .content-text h2,
@@ -107,6 +107,13 @@ body {
 
 .content-text a {
     text-decoration: none;
+    color: #110a59;
+
+}
+.content-text h2 {
+    color: #333;
+    text-align: left;
+
 }
 
 .shadow-box {
@@ -190,7 +197,7 @@ nav ul li a {
     display: block;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 999px) {
     .container {
         flex-direction: column;
         align-items: center;
@@ -212,4 +219,5 @@ nav ul li a {
         font-size: 40px;
         margin-left: 0;
     }
+    
 }
