@@ -8,15 +8,97 @@ body {
     padding: 0 20px;
     display: flex;
     justify-content: space-between;
-    align-items: center; 
+    align-items: center;
     flex-direction: row;
-
 }
 
+.container-pad {
+    margin-top: 45vh;
+}
+
+/* Initial hide for elements */
+.content-text, .footer, .shadow-box, .container h1 {
+    opacity: 0;
+}
 
 .content-text {
     max-width: 1000px;
 }
+
+/* Add smooth transition for font size */
+.content-text h1,
+.content-text p,
+.content-text h2,
+.content-text h3,
+.footer p {
+    transition: font-size 0.5s ease; 
+}
+
+/* Apply smooth text resizing for different screen sizes */
+@media (max-width: 768px) {
+    .content-text h1,
+    .content-text p,
+    .content-text h2,
+    .content-text h3,
+    .footer p {
+        font-size: 18px; /* Adjust font size for smaller screens */
+    }
+}
+
+.intro-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute; /* Fixed positioning for initial centering */
+    top: 20%; /* Initial position at the center of viewport */
+    left: 50%;
+    transform: translate(-50%, 50%);
+
+    z-index: 999; /* Ensure it's on top of other content initially */
+    transition: top 1s ease, opacity 1s ease; /* Smooth transition for sliding */
+}
+
+.intro-text img {
+    max-width: 300px;
+    margin-right: 20px;
+}
+
+.intro-text h2 {
+    display: flex;
+    overflow: hidden;
+    border-right: .15em solid grey;
+    white-space: nowrap;
+    font-size: 6vw;
+    color: #333;
+    margin-left: 6vw;
+    transition: font-size 0.5s ease; /* Add smooth transition for font size */
+}
+
+
+/* Footer styles */
+.footer {
+    margin: 18px 0;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0 auto;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Animation for fadeIn */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Other Styles from the Original CSS */
 
 .content-img {
     max-width: 100px;
@@ -33,26 +115,26 @@ body {
 
 .shadow-box {
     background-color: #f8f8f8;
-    margin: 12px; 
+    margin: 12px;
     padding: 5px;
     border-radius: 20px;
     box-shadow: 10px 10px 20px #d9d9d9, -10px -10px 20px #ffffff;
     text-align: left;
 }
 
-.shadow-box h2, .shadow-box p {
+.shadow-box h2,
+.shadow-box p {
     padding: 10px;
-    margin: 0 auto; 
+    margin: 0 auto;
     font-size: 18px;
     color: #333;
 }
 
 .shadow-box img {
-    padding: 18px;
+    padding: 14px;
     display: block;
     max-width: 200px;
 }
-
 
 header {
     background-color: #f8f8f8;
@@ -112,65 +194,15 @@ nav ul li a {
     display: block;
 }
 
-.intro-text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 50px;
-    opacity: 0;
-    animation: fadeIn 1s ease-in forwards;
-    padding: 50px 20px;
-    text-shadow: 10px 10px 20px #d9d9d9, -10px -10px 20px #ffffff;
-}
-
-.intro-text img {
-    max-width: 300px;
-    margin-right: 20px;
-    
-
-}
-
-.intro-text h2 {
-    display: flex;
-    overflow: hidden;
-    border-right: .15em solid grey;
-    white-space: nowrap;
-    font-size: 6vw; 
-    color: #333;
-    margin-left: 6vw; 
-    transition: font-size 0.5s ease; 
-}
-
-
-
-@keyframes fadeIn {
-    from {
-      opacity: 0; 
-    }
-    to {
-      opacity: 1; 
-    }
-}
-
-.footer {
-    margin: 18px 0; 
-    text-align: center; 
-}
-
-.footer h2, .footer p {
-    margin: 0 auto;
-    font-size: 18px;
-    color: #333;
-}
-
 @media (max-width: 768px) {
-
     .container {
-        flex-direction: column; 
-        align-items: center; 
+        flex-direction: column;
+        align-items: center;
     }
-    
-    
+    .container-pad {
+        margin-top: 66vh;
+    }
+
     .intro-text {
         flex-direction: column;
         text-align: center;
@@ -181,8 +213,7 @@ nav ul li a {
     }
 
     .intro-text h2 {
-        font-size: 10vw; 
+        font-size: 10vw;
         margin-left: 0;
     }
-
 }
