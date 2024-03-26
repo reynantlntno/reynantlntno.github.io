@@ -11,10 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
             i++;
         } else {
             clearInterval(typing);
-            // Show intro text after typing ends
             introText.style.opacity = '1';
             introText.style.top = '0';
-            // After intro text appears, show other contents
             showOtherContents();
         }
     }, 200);
@@ -26,7 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 500);
 
     function showOtherContents() {
-        // Select other contents and show them
         document.querySelectorAll('.content-text, .footer, .shadow-box, .container h1').forEach(function(element) {
             element.style.opacity = '1';
             element.style.animation = 'fadeIn 1s ease-in forwards';
