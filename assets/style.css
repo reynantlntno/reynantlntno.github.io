@@ -13,10 +13,10 @@ body {
 }
 
 .container-pad {
-    margin-top: 45vh;
+    margin-top: 50vh;
 }
 
-/* Initial hide for elements */
+
 .content-text, .footer, .shadow-box, .container h1 {
     opacity: 0;
 }
@@ -25,7 +25,7 @@ body {
     max-width: 1000px;
 }
 
-/* Add smooth transition for font size */
+
 .content-text h1,
 .content-text p,
 .content-text h2,
@@ -200,7 +200,7 @@ nav ul li a {
         align-items: center;
     }
     .container-pad {
-        margin-top: 66vh;
+        margin-top: 70vh;
     }
 
     .intro-text {
