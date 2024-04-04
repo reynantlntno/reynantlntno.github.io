@@ -16,6 +16,10 @@ body {
     margin-top: 450px;
 }
 
+.container-pad img {
+    max-width: 100%;
+    border-radius: 20px;
+}
 
 .content-text, .footer, .shadow-box, .container h1 {
     opacity: 0;
