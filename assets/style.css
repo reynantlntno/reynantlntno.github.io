@@ -18,7 +18,7 @@ body {
 
 .container-pad img {
     max-width: 100%;
-    border-radius: 20px;
+    border-radius: 15px;
 }
 
 .content-text, .footer, .shadow-box, .container h1 {
