@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="assets/dark-mode.css">
-
+  <link rel="stylesheet" href="assets/vid_slide.css">
 </head>
 <body>
 
@@ -47,18 +47,33 @@
         <h2>I'm a hobbyist who loves to tinker with computer software, as well as a freelance Web Developer/Designer and Video Editor.</h2> 
         <p>Proficient in HTML, CSS, with some knowledge of JavaScript and PHP... Well, HTML and CSS are not computer programming languages.</p>
         <br>
+        <h2>Featured Short Clips:</h2> <!-- Added label -->
+        <!-- Video Slider -->
+        <div class="video-slider">
+          <div class="video-container">
+            <video src="assets/videos/1.MOV" controls></video>
+            <video src="assets/videos/2.mp4" controls></video>
+            <video src="assets/videos/3.mp4" controls></video>
+            <video src="assets/videos/4.MOV" controls></video>
+
+
+          </div>
+        </div>
+        <!-- End Video Slider -->
         <h2>My Featured Apple Music Playlist:</h2>
         <div style="left: 0; width: 100%; height: 450px; position: relative;"><iframe src="https://embed.music.apple.com/ph/playlist/music-to-my-ears/pl.u-9N9LXPpF1aZ93Ak" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div>
         <br>
-    <h2>Also Featured:</h2>
-    <img src="assets/banner-mt.jpeg">
-    <a href="https://www.facebook.com/profile.php?id=61553570217478" target="_blank"><h3>Mystic Threads by Mary Tolentino </h3></a>
-    <br>
+
+
+        <br>
+        <h2>Also Featured:</h2>
+        <img src="assets/banner-mt.jpeg">
+        <a href="https://www.facebook.com/profile.php?id=61553570217478" target="_blank"><h3>Mystic Threads by Mary Tolentino </h3></a>
+        <br>
+    </div>
   </div>
 </div>
 
-
-</div>
 
 <div class="container">
   <div class="content-text">
@@ -71,17 +86,14 @@
 </div>
 
 
-
-
-
-</div>
-
 <div class="footer">
     <p> 2024, reynantlntno.</p>
 </div>
 
 <script src="scripts/typewriter.js"></script>
 <script src="scripts/dark-mode.js"></script>
+<script src="scripts/video_slide_script.js"></script>
+
 
 </body>
 </html>

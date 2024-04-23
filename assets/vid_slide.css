@@ -1,0 +1,31 @@
+.video-slider {
+
+  transform: translate(-10%);
+  padding-bottom: 30px;
+  transform: translate(-20%);
+}
+
+.video-container {
+
+  transition: transform 0.5s ease;
+}
+
+video {
+  width: 200px;
+  height: auto;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0.5;
+  border-radius: 10px;
+}
+
+.active {
+  width: 300px;
+  opacity: 1;
+}
+
+.prev,
+.next {
+  opacity: 0.5;
+}
