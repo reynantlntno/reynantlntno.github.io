@@ -1,0 +1,151 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+}
+
+.container {
+    width: 800px;
+    height: 400px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+}
+
+.form-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 200%;
+}
+
+.user-form, .admin-form {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+}
+
+.form-content {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    max-width: auto;
+    height: auto;
+}
+
+.user-logo {
+    background: linear-gradient(135deg, #4a90e2, #0033a0);
+}
+
+.admin-logo {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+.user-form.active, .admin-form.active {
+    display: flex;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #0033a0;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.admin-form .login-button {
+    background-color: #c0392b;
+}
+
+.login-button:hover {
+    background-color: #4a90e2;
+}
+
+.admin-form .login-button:hover {
+    background-color: #e74c3c;
+}
+
+.forgot-password {
+    text-decoration: none;
+    color: #0033a0;
+    font-size: 12px;
+}
+
+.admin-form .forgot-password {
+    color: #c0392b;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.switch-button {
+    background: none;
+    border: none;
+    color: #0033a0;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.admin-form .switch-button {
+    color: #c0392b;
+}
+
+.user-form {
+    background-color: #fff;
+}
+
+.admin-form {
+    background-color: #fff;
+}
+
+.welcome-text {
+    color: #0033a0;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.admin-text {
+    color: #c0392b;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
