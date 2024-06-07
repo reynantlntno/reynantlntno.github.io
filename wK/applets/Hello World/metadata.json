@@ -1,0 +1,7 @@
+{
+  "name": "HelloWorld",
+  "icon": "icon.png",
+  "desc": "Sample app for wK.",
+  "version": "1.0.0",
+  "app.js": "1.0.0"
+}

@@ -1,0 +1,8 @@
+{
+    "name": "aMaker",
+    "icon": "icon.png",
+    "desc": "Create custom applets for wK.",
+    "version": "1.0.0",
+    "app.js": "1.0.0"
+  }
+  

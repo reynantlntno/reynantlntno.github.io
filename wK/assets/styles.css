@@ -1,0 +1,219 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('../assets/fonts/Poppins/Poppins-Black.ttf') format('truetype');
+    font-weight: 900; /* font-weight: black; */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../assets/fonts/Poppins/Poppins-BlackItalic.ttf') format('truetype');
+    font-weight: 900; /* font-weight: black; */
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../assets/fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../assets/fonts/Poppins/Poppins-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../assets/fonts/Poppins/Poppins-ExtraBold.ttf') format('truetype');
+    font-weight: 800; /* font-weight: extra-bold; */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../assets/fonts/Poppins/Poppins-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 800; /* font-weight: extra-bold; */
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../assets/fonts/Poppins/Poppins-ExtraLight.ttf') format('truetype');
+    font-weight: 200; /* font-weight: extra-light; */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../assets/fonts/Poppins/Poppins-ExtraLightItalic.ttf') format('truetype');
+    font-weight: 200; /* font-weight: extra-light; */
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../assets/fonts/Poppins/Poppins-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../assets/fonts/Poppins/Poppins-Light.ttf') format('truetype');
+    font-weight: 300; /* font-weight: light; */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../assets/fonts/Poppins/Poppins-LightItalic.ttf') format('truetype');
+    font-weight: 300; /* font-weight: light; */
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../assets/fonts/Poppins/Poppins-Medium.ttf') format('truetype');
+    font-weight: 500; /* font-weight: medium; */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../assets/fonts/Poppins/Poppins-MediumItalic.ttf') format('truetype');
+    font-weight: 500; /* font-weight: medium; */
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../assets/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../assets/fonts/Poppins/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: 600; /* font-weight: semi-bold; */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../assets/fonts/Poppins/Poppins-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600; /* font-weight: semi-bold; */
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../assets/fonts/Poppins/Poppins-Thin.ttf') format('truetype');
+    font-weight: 100; /* font-weight: thin; */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../assets/fonts/Poppins/Poppins-ThinItalic.ttf') format('truetype');
+    font-weight: 100; /* font-weight: thin; */
+    font-style: italic;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+#wKframe {
+    position: relative;
+    width: 375px;
+    height: 812px; 
+    border-radius: 40px;
+    margin: 50px auto;
+    overflow: hidden;
+    border-style: ridge;
+    background-image: url('def.png'); /* Specify your wallpaper image URL */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#screen {
+    position: absolute;
+    top: -23px;
+    left: 1px;
+    right: 0;
+    bottom: 10%;
+    margin-top: 20px;
+    padding-top: 70px;
+    padding-left: 25px;
+    padding-right: 25px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    grid-template-rows: repeat(5, 1fr); /* 5 rows */
+    gap: 20px; /* Gap between app icons */
+}
+
+.app {
+    width: 100%; /* Full width of the grid cell */
+    height: 100%; /* Full height of the grid cell */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.2s ease; /* Add transition effect */
+}
+
+.app:hover {
+    transform: scale(1.1); /* Scale the app on hover */
+}
+
+.app img {
+    width: 60px; /* Adjusted width of the app icon */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 16px;
+}
+
+.app span {
+    margin-top: 5px;
+    font-size: 10px;
+    color: #fff; /* Make font color white */
+}
+
+.button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+#dock {
+    margin-left: 40px;
+    margin-right: 40px;
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.4); /* Translucent white background */
+    backdrop-filter: blur(5px); /* Apply blur effect */
+    border-radius: 24px; /* Adjust border radius to match the dock */
+}
+

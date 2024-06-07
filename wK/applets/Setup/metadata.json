@@ -1,0 +1,8 @@
+{
+    "name": "Setup",
+    "icon": "icon.png",
+    "desc": "Setup applet for wK.",
+    "version": "1.0.0",
+    "app.js": "1.2.0"
+  }
+  

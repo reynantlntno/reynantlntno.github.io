@@ -1,0 +1,8 @@
+{
+    "name": "Paint",
+    "icon": "icon.png",
+    "desc": "Paint app for wK.",
+    "version": "1.0.0",
+    "app.js": "1.0.0"
+  }
+  

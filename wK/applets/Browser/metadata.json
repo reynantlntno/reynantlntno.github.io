@@ -1,0 +1,8 @@
+{
+    "name": "Browser",
+    "icon": "icon.png",
+    "desc": "Browser applet for wK.",
+    "version": "1.0.0",
+    "app.js": "1.0.0"
+  }
+  
