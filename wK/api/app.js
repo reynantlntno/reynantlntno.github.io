@@ -1,5 +1,5 @@
 // Define the path to the applets directory
-const appletsDir = 'applets/';
+const appletsDir = '/applets/';
 
 // Global variable to track applet switcher visibility
 let appletSwitcherVisible = false;
