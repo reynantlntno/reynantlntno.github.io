@@ -1,7 +1,0 @@
-{
-  "name": "Flappy",
-  "icon": "icon.png",
-  "desc": "Flappy (Flappy Bird-alike) game for wK.",
-  "version": "1.0.0",
-  "app.js": "1.0.0"
-}

@@ -1,8 +1,0 @@
-{
-    "name": "BrowserCheck",
-    "icon": "icon.png",
-    "desc": "BrowserCheck applet for wK.",
-    "version": "1.0.0",
-    "app.js": "1.0.0"
-  }
-  
