@@ -12,6 +12,14 @@
     .intro-text h2 {
       transition: opacity 1s ease-in-out;
     }
+
+    .intro-text img {
+      transition: transform 1s ease-in-out;
+    }
+
+    .intro-text.text-changing img {
+      transform: translateX(10px); /* Adjust the value to your preference */
+    }
   </style>
 </head>
 <body>
@@ -108,34 +116,21 @@
 </script>
 
 <script>
-  function getGreeting() {
-    const now = new Date();
-    const hours = now.getHours();
-    let greeting;
-
-    if (hours < 12) {
-      greeting = "Good morning";
-    } else if (hours < 18) {
-      greeting = "Good noon";
-    } else {
-      greeting = "Good evening";
-    }
-
-    return `${greeting}, Amigos!`;
-  }
-
-  document.getElementById('greeting').textContent = getGreeting();
-
   const texts = ["Hello! 👋🏽", "Kamusta! 👋🏽 ", "Hola! 👋🏽"];
   let currentIndex = 0;
   const typewriterElement = document.getElementById("typewriter");
+  const introTextElement = document.querySelector(".intro-text");
 
   function changeText() {
+    introTextElement.classList.add("text-changing");
     typewriterElement.style.opacity = 0;
     setTimeout(() => {
       currentIndex = (currentIndex + 1) % texts.length;
       typewriterElement.textContent = texts[currentIndex];
       typewriterElement.style.opacity = 1;
+      setTimeout(() => {
+        introTextElement.classList.remove("text-changing");
+      }, 1000); // Match this with the CSS transition duration
     }, 1000);
   }
 
