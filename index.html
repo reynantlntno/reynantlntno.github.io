@@ -8,7 +8,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="assets/dark-mode.css">
-
+  <style>
+    .intro-text h2 {
+      transition: opacity 1s ease-in-out;
+    }
+  </style>
 </head>
 <body>
 
@@ -21,7 +25,6 @@
         <li><a href="https://github.com/reynantlntno" target="_blank">GitHub</a></li>
         <li><a href="https://www.linkedin.com/in/reynan-fuertez" target="_blank">LinkedIn</a></li>
         
-
         <li class="dropdown">
           <a href="#">More</a>
           <div class="dropdown-content">
@@ -37,15 +40,17 @@
   </div>
 </header>
 <div class="intro-text">
-  <img src="assets/reynantlntno-memoji.png" alt="Reynan's Image">
-  <h2 id="typewriter">Hi, I'm Reynan</h2>
+  <img src="assets/favicon.png" alt="Reynan's Image">
+  <h2 id="typewriter">Hola! 👋🏽</h2> 
 </div>
 <br>
 <div class="container">
   <div class="container-pad">
     <div class="content-text">
-        <h2>Hola amigos!</h2> 
+        <h2 id="greeting"></h2> 
         <p>I'm Reynan Tolentino Fuertez, a passionate web developer, author, and video editor hailing from the vibrant town of Daet in Camarines Norte, Philippines 🇵🇭.</p>
+        <p style="font-style: italic;">Ako si Reynan Tolentino Fuertez, isang web developer, manunulat, at video editor mula sa bayan ng Daet sa Camarines Norte, Pilipinas.</p>
+        <p style="font-style: italic;">Soy Reynan Tolentino Fuertez, un desarrollador web, autor y editor de videos apasionado de la vibrante ciudad de Daet en Camarines Norte, Filipinas.</p>
         <br>
         <h2>My Featured Apple Music Playlist:</h2>
         <div style="left: 0; width: 100%; height: 450px; position: relative;"><iframe src="https://embed.music.apple.com/ph/playlist/music-to-my-ears/pl.u-9N9LXPpF1aZ93Ak" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div>
@@ -82,6 +87,60 @@
 
 <script src="scripts/typewriter.js"></script>
 <script src="scripts/dark-mode.js"></script>
+<script>
+  function getGreeting() {
+    const now = new Date();
+    const hours = now.getHours();
+    let greeting;
+
+    if (hours < 12) {
+      greeting = "Good morning";
+    } else if (hours < 18) {
+      greeting = "Good noon";
+    } else {
+      greeting = "Good evening";
+    }
+
+    return `${greeting}, Amigos!`;
+  }
+
+  document.getElementById('greeting').textContent = getGreeting();
+</script>
+
+<script>
+  function getGreeting() {
+    const now = new Date();
+    const hours = now.getHours();
+    let greeting;
+
+    if (hours < 12) {
+      greeting = "Good morning";
+    } else if (hours < 18) {
+      greeting = "Good noon";
+    } else {
+      greeting = "Good evening";
+    }
+
+    return `${greeting}, Amigos!`;
+  }
+
+  document.getElementById('greeting').textContent = getGreeting();
+
+  const texts = ["Hello! 👋🏽", "Kamusta! 👋🏽 ", "Hola! 👋🏽"];
+  let currentIndex = 0;
+  const typewriterElement = document.getElementById("typewriter");
+
+  function changeText() {
+    typewriterElement.style.opacity = 0;
+    setTimeout(() => {
+      currentIndex = (currentIndex + 1) % texts.length;
+      typewriterElement.textContent = texts[currentIndex];
+      typewriterElement.style.opacity = 1;
+    }, 1000);
+  }
+
+  setInterval(changeText, 3000);
+</script>
 
 </body>
 </html>
