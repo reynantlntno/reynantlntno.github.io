@@ -22,7 +22,7 @@
     }
   </style>
 </head>
-<body>
+<body id="body">
 
 <header>
   <div class="container">
@@ -31,7 +31,6 @@
       <ul>
         <li><a href="http://reynantlntno.vercel.app/" target="_blank">Home</a></li>
         <li><a href="https://github.com/reynantlntno" target="_blank">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/reynan-fuertez" target="_blank">LinkedIn</a></li>
         
         <li class="dropdown">
           <a href="#">More</a>
@@ -107,12 +106,20 @@
       greeting = "Good noon";
     } else {
       greeting = "Good evening";
+      // Automatically turn on dark mode
+      document.getElementById('dark-mode-toggle').checked = true;
+      document.getElementById('body').classList.add('dark-mode');
     }
 
     return `${greeting}, Amigos!`;
   }
 
   document.getElementById('greeting').textContent = getGreeting();
+
+  // Automatically enable dark mode if the toggle is checked
+  if (document.getElementById('dark-mode-toggle').checked) {
+    document.getElementById('body').classList.add('dark-mode');
+  }
 </script>
 
 <script>
